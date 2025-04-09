@@ -2,80 +2,92 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
   <title>Ricettario</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- page-wrapper: contenitore principale per centrare e dare spazio -->
+  <div class="page-wrapper">
+    <!-- L'articolo rappresenta una SINGOLA ricetta -->
+    <article class="recipe-card">
+      <!-- Header con immagine e titolo -->
+      <header class="recipe-header">
+        <figure class="recipe-image">
+          <img src="../recipe-page-main/assets/images/image-omelette.jpeg" alt="Example Recipe" />
+        </figure>
+        <h1 class="recipe-title">Titolo di test</h1>
+        <p class="recipe-intro">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odit earum quasi doloremque expedita...
+        </p>
+      </header>
 
-  <!--CONTAINER FOR ALL ELEMNTS -->
-  <div>
-    <!-- CONTAINER FOR IMG FIRST RECIPE -->
-    <div class="container" id="imgFirstRecipe">
-      <img src="https://unsplash.it/600/400" alt="img">
-    </div>
+      <!-- Sezione dedicata alle info sul tempo -->
+      <section class="recipe-time">
+        <h2 class="section-title">Preparation Time</h2>
+        <ul class="time-list">
+          <li><span>Total:</span> ~10 min</li>
+          <li><span>Preparation:</span> 5 min</li>
+          <li><span>Cooking:</span> 10 min</li>
+        </ul>
+      </section>
 
-    <h1 id="titleFirstRecipe">Titolo di test</h1>
+      <!-- Sezione Ingredienti -->
+      <section class="recipe-ingredients">
+        <h2 class="section-title">Ingredients</h2>
+        <ul class="ingredient-list">
+          <li>2-3 large eggs</li>
+          <li>Salt, to taste</li>
+          <li>Pepper, to taste</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>Optional: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+      </section>
 
-    <p id="paragraphFirstRecipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odit earum quasi doloremque expedita ad suscipit molestiae! Deleniti praesentium ullam tempore commodi deserunt quis fugiat quod ut error, quidem animi consequatur labore doloribus velit ipsam necessitatibus iure vel ducimus neque iusto eveniet sunt sit. Soluta ullam eos earum rerum? Reiciendis?
-    </p>
+      <hr />
 
-    <!-- CONTAINER FOR TIME FIRST RECIPE -->
-    <div class="container" id="timeFirstRecipe">
-      <h3>Preparation time</h3>
-      <ul class="listFirstRecipe">
-        <li><span>Total:</span>Approximately 10 min</li>
-        <li><span>Preparation:</span>5 min</li>
-        <li><span>Cooking:</span>10 min</li>
-      </ul>
-    </div>
+      <!-- Sezione Istruzioni -->
+      <section class="recipe-instructions">
+        <h2 class="section-title">Instructions</h2>
+        <ol class="instruction-steps">
+          <li><span>Preheat</span> the oven to 350°F (175°C)</li>
+          <li><span>Beat</span> the eggs in a bowl until smooth</li>
+          <li><span>Add</span> salt and pepper to taste</li>
+          <li><span>Stir</span> in the butter or oil</li>
+          <li><span>Grease</span> a 9x13 inch pan with cooking spray</li>
+          <li><span>Spoon</span> the batter evenly into the pan</li>
+          <li><span>Bake</span> for 20-25 minutes, or until golden brown</li>
+        </ol>
+      </section>
 
-    <!-- CONTAINER FOR INGREDIENTS FIRST RECIPE -->
-    <div class="container" id="ingredientsFirstRecipe">
-      <h2 class="subtitle">Ingredients</h2>
-      <ul class="listFirstRecipe">
-        <li>2-3 large eggs</li>
-        <li>Salt, to taste</li>
-        <li>Pepper, to taste</li>
-        <li>1 tablespoon of butter or oil</li>
-        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
-      </ul>
-    </div>
+      <hr />
 
-    <hr>
-
-    <!--INSTRUCTIONS FIRST RECIPE -->
-
-    <div class="container" id="instructionsFirstRecipe">
-      <h2 class="subtitle">Instructions</h2>
-      <ol>
-        <li><span>Preheat</span>the oven to 350°F (175°C)</li>
-        <li><span>Beat</span>the eggs in a bowl until they are smooth and creamy</li>
-        <li><span>Add</span>salt and pepper to taste</li>
-        <li><span>Stir</span>in the butter or oil</li>
-        <li><span>Grease</span>a 9x13 inch pan with cooking spray</li>
-        <li><span>Spoon</span>the batter evenly into the pan</li>
-        <li><span>Place</span>the pan in the oven and bake for 20-25 minutes, or until the eggs are cooked and the top is golden brown</li>
-      </ol>
-    </div>
-
-    <hr>
-
-    <!-- CONTAINER FOR NUTRITION -->
-    <div class="container" id="nutritionFirstRecipe">
-      <h2 class="subtitle">Nutrition</h2>
-      <ul class="listFirstRecipe">
-        <li>Calories: 200</li>
-        <hr>
-        <li>Protein: 10g</li>
-        <hr>
-        <li>Fat: 10g</li>
-        <hr>
-        <li>Carbohydrates: 10g</li>
-      </ul>
-    </div>
+      <!-- Sezione Nutrizione (aside) -->
+      <aside class="recipe-nutrition">
+        <h2 class="section-title">Nutrition</h2>
+        <div class="nutrition-grid">
+          <div class="nutrient">
+            <span>Calories</span>
+            <strong>200</strong>
+          </div>
+          <div class="nutrient">
+            <span>Protein</span>
+            <strong>10g</strong>
+          </div>
+          <div class="nutrient">
+            <span>Fat</span>
+            <strong>10g</strong>
+          </div>
+          <div class="nutrient">
+            <span>Carbs</span>
+            <strong>10g</strong>
+          </div>
+        </div>
+      </aside>
+    </article>
   </div>
 </body>
 
