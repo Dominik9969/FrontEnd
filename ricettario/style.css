@@ -1,0 +1,193 @@
+/* Esempio di import di Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+/* Reset di base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variabili globali (puoi personalizzare) */
+:root {
+  --bg-color: #fdfcf9;            /* Sfondo pagina */
+  --card-bg-color: #ffffff;       /* Sfondo card */
+  --text-color: #444444;          /* Testo base */
+  --heading-color: #e67e22;       /* Colore arancione per titoli */
+  --heading-font: 'Merriweather', serif;
+  --body-font: 'Roboto', sans-serif;
+  --border-radius: 16px;
+  --box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  --accent-color: #e67e22;        /* Per linee e highlights */
+}
+
+/* Body: centrare e definire sfondo */
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Page wrapper: limita la larghezza e gestisce margini globali */
+.page-wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Ricetta: card principale */
+.recipe-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+/* Header: immagine, titolo, intro */
+.recipe-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.recipe-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  max-width: 600px; /* se vuoi limitare la larghezza dell'immagine */
+}
+
+.recipe-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  margin: 1rem 0;
+}
+
+.recipe-intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Sezioni Time, Ingredients, Instructions, Nutrition */
+.recipe-time,
+.recipe-ingredients,
+.recipe-instructions,
+.recipe-nutrition {
+  margin-bottom: 2rem;
+}
+
+/* Titoli delle sezioni (Ingredients, Instructions, etc.) */
+.section-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* Liste generiche */
+.time-list,
+.ingredient-list,
+.nutrition-list {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.time-list li,
+.ingredient-list li,
+.nutrition-list li {
+  margin-bottom: 0.5rem;
+}
+
+.time-list li span,
+.recipe-instructions ol li span {
+  font-weight: 600;
+  margin-right: 0.4rem;
+  color: var(--heading-color);
+}
+
+/* Istruzioni come elenco ordinato */
+.recipe-instructions ol {
+  margin-left: 1.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.recipe-instructions ol li {
+  margin-bottom: 0.75rem;
+}
+
+/* Nutrition con eventuali linee divisorie */
+.nutrition-list li {
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+}
+.nutrition-list li:last-child {
+  border-bottom: none;
+}
+
+/* Separatore hr */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+/* Responsive media query (schermi max 480px) */
+@media (max-width: 480px) {
+  .recipe-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
+.recipe-nutrition {
+  margin-bottom: 2rem;
+}
+
+/* Contenitore grid */
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 colonne di uguale larghezza */
+  gap: 1rem; /* Spaziatura tra le colonne */
+  margin-top: 1rem;
+}
+
+/* Ogni cella con nutrienti */
+.nutrient {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Stile del testo all’interno di ogni cella */
+.nutrient span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.nutrient strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  color: #333;
+  font-weight: 600;
+}
